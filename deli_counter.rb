@@ -1,4 +1,5 @@
 # Write your code here.
+COUNTER = 0
 
 # initializes the deli line, if there is nothing to pass, deli line is empty
 def local_deli(line = [])
@@ -24,10 +25,11 @@ def line(deli_line)
   puts string_output
 end
 
-def take_a_number(deli_line, person)
-  deli_line << person
-  place = deli_size(deli_line)
-  puts "Welcome, #{person}. You are number #{place} in line."
+def take_a_number(deli_line)
+  place = COUNTER += 1
+  deli_line << place
+  
+  puts "You are number #{place} in line."
   return deli_line
 end
 
